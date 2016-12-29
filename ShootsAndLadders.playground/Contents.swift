@@ -161,11 +161,11 @@ class ViewController : UIViewController {
     
     func play(){
         //queue.async {
-            DispatchQueue.main.async {
+            //DispatchQueue.main.async {
                 self.showLoadingIndicator()
-            }
+            //}
         //}
-        queue.async {
+        //queue.async {
         self.setupBoard(board: &self.board);
     
         
@@ -178,7 +178,7 @@ class ViewController : UIViewController {
             DispatchQueue.main.async {
                 self.playTimer = Timer.scheduledTimer(timeInterval: turnInterval, target: self, selector: #selector(ViewController.move), userInfo: nil, repeats: true)
             }
-        }
+        //}
         
 
     }
